@@ -1,23 +1,27 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="tertiary">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>
-      List
+      Eventos
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
+   
     <ion-item *ngFor="let item of items">
-      <ion-icon [name]="item.icon" slot="start"></ion-icon>
-      {{item.title}}
-      <div class="item-note" slot="end">
-        {{item.note}}
-      </div>
-    </ion-item>
+        <ion-avatar slot="start">
+          <img src="https://ps.w.org/wp-events-manager/assets/icon-256x256.png?rev=1619093">
+        </ion-avatar>
+        <ion-label>
+          <h2>{{item.title}}</h2>
+         
+          <p> {{item.note}}</p>
+        </ion-label>
+      </ion-item>
   </ion-list>
   <!--
     <div *ngIf="selectedItem" padding>

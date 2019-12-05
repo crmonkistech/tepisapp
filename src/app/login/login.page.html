@@ -1,0 +1,33 @@
+
+<ion-content color="tertiary" padding>
+    <form #form="ngForm" (ngSubmit)="login(form)">
+      <ion-grid>
+        <ion-row color="tertiary" justify-content-center>
+          <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+            <div text-center>
+              <h3>TEPIS</h3>
+            </div>
+            <div padding>
+              <ion-item>
+                <ion-input name="email" type="email" placeholder="your@email.com" ngModel required></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-input name="password" type="password" placeholder="Password" ngModel required></ion-input>
+              </ion-item>
+            </div>
+            <div padding>
+              <ion-button size="large" type="button" (click)="IniciarSesion()"  expand="block">Entrar</ion-button>
+            </div>
+            <div padding>
+              <ion-button  size="medium" expand="block">
+               Facebook
+              </ion-button>
+              <ion-button  size="medium"  color="danger" expand="block">
+                  Google
+                 </ion-button>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </form>
+  </ion-content>
